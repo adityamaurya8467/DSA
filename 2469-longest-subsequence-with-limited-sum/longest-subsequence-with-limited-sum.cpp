@@ -11,12 +11,18 @@ public:
         }
         // finding maximum queries
         for(int i = 0; i < m; i++){
-            int len = 0;
-            for(int j = 0; j < n; j++){
-                if( nums[j] > queries[i]) break;
-                len++;
+            int maxLen = 0;
+            int low = 0;
+            int high = n-1;
+            while(low <= high){
+                int mid = low + (high - low) / 2;
+                if(nums[mid] > queries[i]) high = mid-1;
+                else{
+                    maxLen = mid + 1;
+                    low = mid + 1;
+                }
             }
-            ans[i] = len;
+            ans[i] = maxLen;
         } 
         return ans;
     }
