@@ -1,9 +1,6 @@
 class Solution {
 public:
     vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
-        int first = 0;
-        int last = n-1;
-        int seat = 0;
         vector<int> diff(n + 1, 0);
         vector<int> answer(n);
         for(auto &booking : bookings) {
