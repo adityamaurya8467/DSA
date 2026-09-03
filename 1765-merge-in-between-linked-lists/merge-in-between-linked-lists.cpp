@@ -12,7 +12,7 @@ public:
             curr2 = curr2->next;
         }
         ListNode* temp = list2;
-        while(temp->next != NULL){
+        while(temp->next){
             temp = temp->next;
         }
         temp->next = curr2;
