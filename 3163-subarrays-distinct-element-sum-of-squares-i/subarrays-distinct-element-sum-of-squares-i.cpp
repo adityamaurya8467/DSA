@@ -7,8 +7,8 @@ public:
             unordered_set<int> s;
             for(int j = i; j < n; ++j){
                 s.insert(nums[j]);
-                int distict_count = s.size();
-                res += distict_count*distict_count;
+                int count = s.size();
+                res += count*count;
             }
         }
         return res;
